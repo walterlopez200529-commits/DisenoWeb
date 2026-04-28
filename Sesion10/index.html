@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Guía de enlaces, imágenes y tablas en HTML</h1>
-    <div>
+    <div id="recursos">
         <h2>Recursos para diseño web</h2>
         <p>Explora herramientas útiles en sitio externos</p>
         <ul>
@@ -26,5 +26,78 @@
         <ul>
             <li><a href="Proyectos/portafolio.html">Ver nuestro portafolio</a></li>
         </ul>
-</body>
+
+        <hr>
+
+        <div>
+            <h2>Contenido de esta página</h2>
+            <ul>
+                <li><a href="#imagenes">Ir a la sección de imágenes</a></li>
+                <li><a href="#tablas">Ir a la sección de tablas</a></li>
+                <li><a href="#recursos">Volver a recursos externos</a></li>
+            </ul>
+        </div>
+
+        <hr>
+        <div id="imagenes" style="background-color: aquamarine;">
+            <h3>Sección de imágenes</h3>
+            <h2>Formatos de imagen en web</h2>
+            <p>Ejemplo de diferentes formatos</p>
+            <ul>
+                <li>JPEG: <img src="img/HTML5.jpg" alt="Ejemplo de foto JPEG" width="300"></li>
+                <hr style="border: 1px solid black;">
+                <li>PNG: <img src="img/HTML5.png" alt="Logo con transparencia" width="300"></li>
+                <hr style="border: 1px solid black;">
+                <li>SVG: <img src="img/HTML5.svg" alt="Vector escalable" width="120" title="Esto es un vector"></li>
+                <hr style="border: 1px solid black;">
+                <li>GIF: <img src="img/HTML5.gif" alt="Imagen animada" width="300"></li>
+            </ul>
+        </div>
+        
+        <hr>
+        <div id="tablas">
+            <h3>Sección de tablas</h3>
+            <h2>Comparativa de formatos de imagen</h2>
+            <table border="1">
+                <caption>Características técnicas de formatos web</caption>
+                <thead>
+                    <tr>
+                        <th>Formato</th>
+                        <th>Transparencia</th>
+                        <th>Animación</th>
+                        <th>Uso típico</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Fuente: MDN Web Docs</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>JPEG</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Fotografías</td>
+                    </tr>
+                    <tr>
+                        <td>PNG</td>
+                        <td>Sí</td>
+                        <td>No</td>
+                        <td>Logos, iconos</td>
+                    </tr>
+                    <tr>
+                        <td>GIF</td>
+                        <td>Sí (binaria)</td>
+                        <td>Sí</td>
+                        <td>Animaciones cortas</td>
+                    </tr>
+                    <tr>
+                        <td>SVG</td>
+                        <td>Sí</td>
+                        <td>Sí (con CSS/JS)</td>
+                        <td>Gráficos escalables</td>
+                    </tr>
+            </table>
+        </div>
 </html>
