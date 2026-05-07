@@ -1,0 +1,16 @@
+a[class="externo"]{
+    color: green;
+}
+
+/* .externo{
+    color: green;
+} */
+
+a[class~="prueba"]{
+    color: magenta;
+}
+
+/*si hubiera otra clase prueba lo tomaba y no solo a los enlaces
+.prueba{
+    color: magenta;
+} */
