@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    min-height: 74vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 1fr 100px;
+    grid-template-areas: "my-nav" "my-section" "my-aside";
+}
+
+header{
+    background-color: firebrick;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    min-height: 16vh;
+}
+
+nav{
+    background-color: lightcoral;
+    grid-area: my-nav;
+}
+
+section{
+    background-color: pink;
+    grid-area: my-section;
+}
+
+aside{
+    background-color: lightcoral;
+    grid-area: my-aside;
+}
+
+nav, section, aside{
+    padding: 20px;
+}
+
+footer{
+    background-color: darkred;
+    min-height: 10vh;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 600px) and (max-width: 1000px){
+    main{
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: 80px 1fr;
+        grid-template-areas: "my-nav my-nav" "my-aside my-section";
+    }
+}
+
+@media (max-width: 1001px){
+    main{
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-rows: 100%;
+        grid-template-areas: "my-nav my-section my-aside";
+    }
+
+    li{
+        display: block;
+        margin-right: 20px;
+    }
+}

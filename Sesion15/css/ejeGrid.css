@@ -1,0 +1,38 @@
+.grid{
+    display: grid;
+    grid-template-areas: "encabezado encabezado"
+                         "menu principal"
+                         "pie pie";
+}
+
+.a{
+    grid-area: encabezado;
+    background-color: blue;
+}
+
+.b{
+    grid-area: menu;
+    background-color: red;
+}
+
+.c{
+    grid-area: principal;
+    background-color: green;
+}
+
+.d{
+    grid-area: pie;
+    background-color: orange;
+}
+
+/* .grid{
+    display: grid;
+    grid-template-columns: 50px 300px;
+    gap: 200px 75px;
+} */
+
+/* .grid{
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 2fr 1fr;
+} */
