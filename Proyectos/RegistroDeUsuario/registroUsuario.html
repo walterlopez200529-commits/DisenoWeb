@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Usuario</title>
+</head>
+
+<body style="background-color: #f0f0f0; font-family: Arial, sans-serif;">
+
+    <div id="Contenedor" style="width: 600px; display: flex; margin: 40px auto; border: 1px solid #cccccc;">
+
+        <div id="panelIzquierdo" style="width: 200px; background-color: #c0392b; padding: 30px; text-align: center; color: white;">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" width="70" alt="usuario"><br><br>
+            <h2 style="color: white;">Bienvenido</h2>
+            <p style="color: white; font-size: 13px;">Para unirte a nuestra comunidad por favor inicia sesión con tus datos</p>
+            <input type="button" value="Iniciar sesión"
+                style="background-color: white; color: #c0392b; border: none; padding: 8px 16px; cursor: pointer; width: 100%;">
+        </div>
+
+        <div id="panelDerecho" style="flex: 1; background-color: white; padding: 30px;">
+            <h2 style="text-align: center; color: #333;">Nuevo Usuario</h2>
+
+            <div style="text-align: center;">
+                <input type="button" value="Registro con Facebook"
+                    style="background-color: #3b5998; color: white; border: none; padding: 7px 2px; cursor: pointer; margin-right: 8px;">
+                <input type="button" value="Registro con google"
+                    style="background-color: #dd4b39; color: white; border: none; padding: 7px 2px; cursor: pointer;">
+            </div>
+
+            <br>
+            <p style="text-align: center; color: #888; font-size: 13px;">O registrarse con</p>
+
+            <form id="formulario1" name="formulario1" method="post" action="data.php">
+
+                <input type="text" name="nombres" id="nombres" placeholder="Nombres"
+                    style="border: 1px solid #ccc; padding: 6px; width: 120px; margin-right: 5px;">
+
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos"
+                    style="border: 1px solid #ccc; padding: 6px; width: 120px;"><br><br>
+
+                <input type="email" name="correo" id="correo" placeholder="micorreo@dominio"
+                    style="border: 1px solid #ccc; padding: 6px; width: 95%;"><br><br>
+
+                <input type="password" name="contrasena" id="contrasena" placeholder="su contrasena"
+                    style="border: 1px solid #ccc; padding: 6px; width: 95%;"><br><br>
+
+                <input type="checkbox" name="terminos" id="terminos">
+                <label for="terminos" style="font-size: 12px; color: #555;">
+                    Al crear esta cuenta, aceptas nuestros <b style="color: #c0392b;">terminos &amp; condiciones</b>
+                </label>
+                <br><br>
+
+                <div style="text-align: center;">
+                    <input type="submit" value="Enviar"
+                        style="background-color: #c0392b; color: white; border: none; padding: 9px 40px; cursor: pointer;">
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -10,15 +10,15 @@
 
 <body>
 
-    <div id="Contenedor" style="width: 600px; display: flex;">
+    <div id="Contenedor" style="width: 700px; display: flex; border: 1px solid #999;">
 
-        <div id="panelIzquierdo" style="width: 200px; background-color: #cccccc; padding: 20px;">
+        <div id="panelIzquierdo" style="width: 220px; background-color: #cccccc; padding: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
             <h2>Bienvenido</h2>
             <p>Para unirte a nuestra comunidad por favor inicia sesión con tus datos</p>
-            <input type="button" value="Iniciar sesión">
+            <input type="button" value="Iniciar sesión" style="padding: 6px 14px; font-weight: bold;">
         </div>
 
-        <div id="panelDerecho" style="padding: 20px;">
+        <div id="panelDerecho" style="flex: 1; padding: 30px; text-align: center;">
             <h2>Nuevo Usuario</h2>
 
             <input type="button" value="Registro con Facebook">
@@ -28,17 +28,15 @@
 
             <form id="formulario1" name="formulario1" method="post" action="data.php">
 
-                <label for="nombres">Nombres</label>
-                <input type="text" name="nombres" id="nombres" style="width: 150px;">
-
-                <label for="apellidos">Apellidos</label>
-                <input type="text" name="apellidos" id="apellidos" style="width: 150px;">
+                <input type="text" name="nombres" id="nombres" placeholder="Nombres" style="width: 178px;">
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" style="width: 178px;">
                 <br><br>
 
-                <input type="email" name="correo" id="correo" placeholder="micorreo@dominio" style="width: 340px;"><br><br>
+                <input type="email" name="correo" id="correo" placeholder="micorreo@dominio" style="width: 370px;"><br><br>
 
-                <input type="password" name="contrasena" id="contrasena" placeholder="su contrasena" style="width: 340px;"><br><br>
+                <input type="password" name="contrasena" id="contrasena" placeholder="su contrasena" style="width: 370px;"><br>
 
+                <br>
                 <input type="checkbox" name="terminos" id="terminos">
                 <label for="terminos">Al crear esta cuenta, aceptas nuestros <b>terminos &amp; condiciones</b></label>
                 <br><br>
