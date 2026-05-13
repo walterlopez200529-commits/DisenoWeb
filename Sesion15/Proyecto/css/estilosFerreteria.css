@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f3b0b0;
+}
+
+/* ===== CONTENEDOR ===== */
+
+.contenedor{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-areas:
+    "header"
+    "nav"
+    "aside"
+    "main"
+    "footer";
+}
+
+/* ===== HEADER ===== */
+
+header{
+
+    grid-area:header;
+
+    background:#b30000;
+
+    color:white;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+}
+
+.logo h1{
+    font-size:40px;
+}
+
+.logo p{
+    font-size:18px;
+}
+
+/* ===== IMAGENES HEADER ===== */
+
+.imagenes-header{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+}
+
+.imagenes-header img{
+
+    width:75px;
+
+    height:75px;
+
+    object-fit:contain;
+}
+
+/* ===== NAV ===== */
+
+nav{
+
+    grid-area:nav;
+
+    background:#e48c8c;
+
+    padding:20px;
+}
+
+nav h2{
+    margin-bottom:15px;
+}
+
+nav a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:black;
+
+    margin-bottom:10px;
+
+    font-weight:bold;
+}
+
+/* ===== ASIDE ===== */
+
+aside{
+
+    grid-area:aside;
+
+    background:#cf6666;
+
+    padding:20px;
+}
+
+aside h2{
+    margin-bottom:15px;
+}
+
+aside ul{
+    list-style:none;
+}
+
+aside li{
+    margin-bottom:8px;
+}
+
+/* ===== MAIN ===== */
+
+main{
+
+    grid-area:main;
+
+    background:#f5c2c2;
+
+    padding:20px;
+}
+
+main h2{
+    margin-bottom:20px;
+}
+
+.servicio{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+    align-items:flex-start;
+}
+
+.servicio img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+}
+
+.servicio h3{
+
+    margin-bottom:10px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+
+    grid-area:footer;
+
+    background:#990000;
+
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+}
+
+footer p{
+
+    margin-bottom:5px;
+}
+
+/* ===== TABLET ===== */
+
+@media(min-width:600px){
+
+    .contenedor{
+
+        grid-template-columns: 1fr 2fr 1fr;
+
+        grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    }
+}
+
+/* ===== PC ===== */
+
+@media(min-width:1000px){
+
+    .contenedor{
+
+        grid-template-columns: 1fr 3fr 1fr;
+
+        grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    }
+
+    .logo h1{
+        font-size:48px;
+    }
+}
