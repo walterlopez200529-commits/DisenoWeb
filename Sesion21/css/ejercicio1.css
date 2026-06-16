@@ -1,0 +1,13 @@
+.parrafo{
+    font-family: Arial;
+    text-align: justify;
+}
+
+.parrafo::first-letter{
+    float: left;
+    font-size: 80px;
+    line-height: 60px;
+    padding: 2px;
+    font-family: times;
+    margin-right: 5px;
+}

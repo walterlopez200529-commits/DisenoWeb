@@ -1,0 +1,119 @@
+body {
+    background-color: #1a1a2e;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.escenario {
+    width: 500px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fantasma {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+}
+
+.cuerpo {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+    top: 0;
+}
+
+.patas {
+    width: 50px;
+    height: 14px;
+    position: absolute;
+    top: 46px;
+    display: flex;
+}
+
+.pata {
+    width: 16.66px;
+    height: 14px;
+    border-radius: 0 0 8px 8px;
+}
+
+.pata:nth-child(2) { margin: 0 1px; }
+
+.ojo-izq,
+.ojo-der {
+    position: absolute;
+    width: 14px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    top: 14px;
+}
+
+.ojo-izq { left: 10px; }
+.ojo-der { right: 10px; }
+
+.pupila {
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    background-color: #1a1a2e;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+}
+
+.fantasma-rojo .cuerpo { background-color: #e24b4a; }
+.fantasma-rojo .pata   { background-color: #e24b4a; }
+
+.fantasma-morado .cuerpo { background-color: #7f77dd; }
+.fantasma-morado .pata   { background-color: #7f77dd; }
+
+.fantasma-verde .cuerpo { background-color: #1d9e75; }
+.fantasma-verde .pata   { background-color: #1d9e75; }
+
+@keyframes moverRojo {
+    0%   { top: 20px;  left: 0; }
+    20%  { top: 20px;  left: 60%; }
+    40%  { top: 140px; left: 60%; }
+    60%  { top: 140px; left: 10%; }
+    80%  { top: 250px; left: 50%; }
+    100% { top: 20px;  left: 0; }
+}
+
+@keyframes moverMorado {
+    0%   { top: 200px; left: 70%; }
+    25%  { top: 50px;  left: 70%; }
+    50%  { top: 50px;  left: 20%; }
+    75%  { top: 200px; left: 20%; }
+    100% { top: 200px; left: 70%; }
+}
+
+@keyframes moverVerde {
+    0%   { top: 100px; left: 30%; }
+    33%  { top: 280px; left: 80%; }
+    66%  { top: 10px;  left: 50%; }
+    100% { top: 100px; left: 30%; }
+}
+
+.fantasma-rojo   {
+    animation-name: moverRojo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.fantasma-morado {
+    animation-name: moverMorado;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.fantasma-verde  {
+    animation-name: moverVerde;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}

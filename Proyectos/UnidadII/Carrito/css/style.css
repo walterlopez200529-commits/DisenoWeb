@@ -1,0 +1,82 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin: 10px;
+}
+
+.campos {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.campos label {
+    width: 110px;
+    font-weight: bold;
+}
+
+.campos input,
+.campos select {
+    width: 250px;
+    padding: 4px;
+    border: 1px solid #999;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.botones input {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.botones input:hover {
+    background-color: blanchedalmond;
+}
+
+.formulario {
+    background-color: rgb(229, 221, 221);
+    width: 420px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.contactos {
+    background-color: blanchedalmond;
+    width: 520px;
+    margin: 0 auto 20px auto;
+    padding: 15px;
+}
+
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabla-carrito th {
+    background-color: #00ffaa;
+    text-align: left;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+}
+
+.tabla-carrito td {
+    background-color: #d8d8d8;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+}
+
+.total-box {
+    text-align: right;
+    margin-top: 12px;
+    font-size: 18px;
+    color: #333;
+}

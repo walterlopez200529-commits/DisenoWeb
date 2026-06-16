@@ -1,0 +1,66 @@
+body{
+    font-family: Arial;
+}
+
+.campos {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.campos label {
+    width: 100px;
+    font-weight: bold;
+}
+
+.campos input {
+    width: 250px;
+    padding: 4px;
+    border: 1px solid #999;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.formulario{
+    background-color: rgb(229,221,221);
+}
+
+.contactos{
+    background-color: blanchedalmond;
+}
+
+h2{
+    text-align: center;
+}
+
+.formulario,.contactos{
+    width: 380px;
+    margin: auto;
+    padding: 10px;
+}
+
+.tabla-contactos {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabla-contactos th {
+    background-color: #00ffaa;
+    text-align: left;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+}
+
+.tabla-contactos td {
+    background-color: #d8d5d5;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+}
+
+.botones input:hover {
+    background-color: blanchedalmond;
+}
