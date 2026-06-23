@@ -1,0 +1,120 @@
+:root {
+    --color-cyan-dark: #1ec8e0;
+    --color-cyan-light: #cdf1f7;
+    --color-blue-btn: #2f7bf0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--color-blue-btn) !important;
+    border-color: var(--color-blue-btn) !important;
+}
+
+.btn-primary:hover {
+    background-color: #1f63d6 !important;
+    border-color: #1f63d6 !important;
+}
+
+.marcas-active {
+    background-color: var(--color-blue-btn) !important;
+    border-color: var(--color-blue-btn) !important;
+}
+
+.navbar-brand {
+    color: #000 !important;
+}
+
+.carousel-img {
+    height: 380px;
+    width: 100%;
+    object-fit: contain;
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 250px;
+    }
+}
+
+.topbar-menu {
+    background-color: var(--color-cyan-dark);
+}
+
+.topbar-menu .nav-link {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #0d1b2a;
+}
+
+.active-link {
+    background-color: var(--color-blue-btn);
+    color: #fff !important;
+    border-radius: 4px;
+}
+
+.topbar-logo {
+    background-color: var(--color-cyan-light);
+}
+
+.btn-buscar {
+    background-color: #f5fbfd;
+    border: 1px solid #9ad9e8;
+    color: #1a1a1a;
+    font-weight: 400;
+}
+
+.btn-buscar:hover {
+    background-color: #e6f7fb;
+}
+
+.logo-img {
+    height: 45px;
+    mix-blend-mode: multiply;
+}
+
+.btn-social {
+    background-color: #14213d;
+    color: #fff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.btn-social:hover {
+    background-color: #1f2f55;
+    color: #fff;
+}
+
+.bg-dark .nav-link {
+    font-size: 0.95rem;
+    font-weight: 400;
+    padding: 0.6rem 1rem;
+}
+
+.product-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-card:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    transition: 0.2s ease-in-out;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer h6 {
+    color: #fff;
+}

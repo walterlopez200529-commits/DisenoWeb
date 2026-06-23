@@ -1,0 +1,36 @@
+header{
+    background-color: blueviolet;
+    height: 18vh;
+}
+
+nav{
+    background-color: cornflowerblue;
+    height: 8vh;
+}
+
+section{
+    background-color: indigo;
+    height: 48vh;
+}
+
+aside{
+    background-color: darkmagenta;
+    height: 8vh;
+}
+
+footer{
+    background-color: darkorchid;
+    height: 18vh;
+}
+
+@media (min-width: 576px) {
+    section, aside{
+        height: 56vh;
+    }
+}
+
+@media (min-width: 992px) {
+    nav, section, aside{
+        height: 64vh;
+    }
+}
