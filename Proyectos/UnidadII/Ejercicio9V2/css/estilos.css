@@ -1,0 +1,220 @@
+body {
+    background-color: #0f0f1a;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.contenedor-juego {
+    text-align: center;
+}
+
+h1 {
+    color: #ffd700;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 #1919a6;
+}
+
+/* ---------- Info del juego ---------- */
+.info-juego {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 0 auto 10px auto;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.puntaje span:last-child {
+    color: #ffd700;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(15, 26px);
+    grid-template-rows: repeat(13, 26px);
+    background-color: #000;
+    border: 4px solid #1919a6;
+    margin: 0 auto;
+    position: relative;
+}
+
+.celda {
+    width: 26px;
+    height: 26px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.pared {
+    background-color: #1919a6;
+    border-radius: 4px;
+}
+
+.punto::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: #ffd866;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fruta::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: #ff8c69;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: parpadeo 0.6s infinite alternate;
+}
+
+.pacman {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    z-index: 5;
+    transition: left 0.15s linear, top 0.15s linear;
+    clip-path: polygon(100% 74%, 44% 48%, 100% 21%, 100% 0, 0 0, 0 100%, 100% 100%);
+    animation: comer 0.3s infinite alternate;
+}
+
+.pacman.derecha { transform: rotate(0deg); }
+.pacman.izquierda { transform: rotate(180deg); }
+.pacman.arriba { transform: rotate(-90deg); }
+.pacman.abajo { transform: rotate(90deg); }
+
+/* ---------- Fantasmas ---------- */
+.fantasma {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50% 50% 0 0;
+    z-index: 4;
+    transition: left 0.18s linear, top 0.18s linear;
+    animation: flotar 0.5s infinite alternate;
+}
+
+.fantasma::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 9px 0 0 white;
+}
+
+.fantasma.rojo   { background-color: #ff3b3b; }
+.fantasma.rosa   { background-color: #ffb8de; }
+.fantasma.cyan   { background-color: #00e0ff; }
+
+/* Estado "asustado" tras comer la fruta especial */
+.fantasma.asustado {
+    background-color: #1919a6;
+    animation: parpadeoFantasma 0.4s infinite alternate, flotar 0.5s infinite alternate;
+}
+
+.fantasma.asustado::before {
+    background-color: #ff8c69;
+    box-shadow: 9px 0 0 #ff8c69;
+}
+
+@keyframes parpadeoFantasma {
+    from { background-color: #1919a6; }
+    to   { background-color: #5050d0; }
+}
+
+/* ---------- Pantalla "LISTO" antes de iniciar la ronda ---------- */
+.pantalla-listo {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffd700;
+    letter-spacing: 4px;
+    animation: pulso 0.6s infinite alternate;
+}
+
+.pantalla-listo.oculto {
+    display: none;
+}
+
+/* ---------- Keyframes (animation-name + @keyframes, como en la sesión) ---------- */
+@keyframes comer {
+    0%   { clip-path: polygon(100% 74%, 44% 48%, 100% 21%, 100% 0, 0 0, 0 100%, 100% 100%); }
+    100% { clip-path: polygon(100% 50%, 100% 50%, 100% 50%, 100% 0, 0 0, 0 100%, 100% 100%); }
+}
+
+@keyframes flotar {
+    from { margin-top: 0px; }
+    to   { margin-top: 3px; }
+}
+
+@keyframes parpadeo {
+    from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    to   { opacity: 0.4; transform: translate(-50%, -50%) scale(1.3); }
+}
+
+/* ---------- Mensajes y controles ---------- */
+.mensaje {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    animation: pulso 1s infinite alternate;
+}
+
+.mensaje.victoria { color: #5dcaa5; }
+.mensaje.derrota { color: #e24b4a; }
+.mensaje.oculto { display: none; }
+
+@keyframes pulso {
+    from { transform: scale(1); }
+    to   { transform: scale(1.1); }
+}
+
+.controles {
+    margin-top: 15px;
+}
+
+.boton-control {
+    background-color: #1919a6;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.boton-control:hover {
+    background-color: #ffd700;
+    color: #1919a6;
+}
+
+.instrucciones {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 8px;
+}
